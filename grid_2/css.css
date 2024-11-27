@@ -1,0 +1,142 @@
+* :not(body) {
+    font-family: arial;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    padding: 10px;
+}
+body {
+    display: grid;
+    width: auto;
+    height: 700px;
+    place-items: center;
+    background-color: #202020;
+}
+.container {
+    width: 500px;
+    height: 500px;
+    justify-content: center;
+}
+article {
+    width: auto;
+    height: 700px;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-areas:
+    'D2 D2 D2 D2 D2 D2 D1'
+    'D3 C1 C1 C1 C1 B3 D1'
+    'D3 C2 A3 A3 A2 B3 D1'
+    'D3 C2 B1 A1 A2 B3 D1'
+    'D3 C2 B1 B2 B2 B2 D1'
+    'D3 C2 C3 C3 C3 C3 C3'
+    'D3 F1 F1 F1 F1 F1 F1'
+    ;
+    gap: 5px;
+    background-color: #000000;
+    border: 5px solid #FFFFFF;
+}
+.A1 {
+    display: grid;
+    grid-area: A1;
+    width: auto;
+    height: auto;
+    place-items: center;
+    background-color: #fe6347;
+}
+
+.A2 {
+    display: grid;
+    grid-area: A2;
+    height: auto;
+    width: auto;
+    place-items: center;
+    background-color: #4581b3;
+}
+.A3 {
+    display: grid;
+    grid-area: A3;
+    height: auto;
+    width: auto;
+    place-items: center;
+    background-color: #3cb371;
+}
+.B1 {
+    display: grid;
+    grid-area: B1;
+    height: auto;
+    width: auto;
+    place-items: center;
+    background-color: #989047;
+}
+.B2 {
+    display: grid;
+    grid-area: B2;
+    height: auto;
+    width: auto;
+    place-items: center;
+    background-color: #da6fd5;
+}
+.B3 {
+    display: grid;
+    grid-area: B3;
+    height: auto;
+    width: auto;
+    place-items: center;
+    background-color: #883185;
+}
+.C1 {
+    display: grid;
+    grid-area: C1;
+    height: auto;
+    width: auto;
+    place-items: center;
+    background-color: #9470dc;
+}
+.C2 {
+    display: grid;
+    grid-area: C2;
+    height: auto;
+    width: auto;
+    place-items: center;
+    background-color: #6594ec;
+}
+.C3 {
+    display: grid;
+    grid-area: C3;
+    height: auto;
+    width: auto;
+    place-items: center;
+    background-color: #2752a1;
+}
+.D1 {
+    display: grid;
+    grid-area: D1;
+    height: auto;
+    width: auto;
+    place-items: center;
+    background-color: #57a188;
+}
+.D2 {
+    display: grid;
+    grid-area: D2;
+    height: auto;
+    width: auto;
+    place-items: center;
+    background-color: #db123c;
+}
+.D3 {
+    display: grid;
+    grid-area: D3;
+    height: auto;
+    width: auto;
+    place-items: center;
+    background-color: #86cdf9;
+}
+.F1 {
+    display: grid;
+    grid-area: F1;
+    height: auto;
+    width: auto;
+    place-items: center;
+    background-color: #20b0a9;
+}

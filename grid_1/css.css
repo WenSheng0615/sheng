@@ -1,0 +1,168 @@
+body {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 700px;
+    font-family: arial;
+}
+.container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-areas: 
+    'A1 A1 A2 A3 A3'
+    'B1 cat cat B2 B2'
+    'B1 cat cat B2 B2'
+    'B1 C1 C1 B2 B2'
+    'B1 C2 C2 C2 E123'
+    'D1 C2 C2 C2 E123'
+    'D2 D3 F1 F1 F1'
+    ;
+    width: 500px;
+    gap: 10px;
+    padding: 5px;
+    border: 5px solid #FFFFFF;
+}
+.A1 {
+    grid-area: A1;
+    display: grid;
+    height: auto;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    width: auto;
+    text-align: center;
+    place-items: center;
+    background-color: #ff0582;
+}
+.A2 {
+    grid-area: A2;
+    display: grid;
+    height: 50px;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    width: auto;
+    text-align: center;
+    place-items: center;
+    background-color: #7f88ff;
+}
+.A3 {
+    grid-area: A3;
+    display: grid;
+    height: 50px;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    width: auto;
+    text-align: center;
+    place-items: center;
+    background-color: #abce11;
+}
+.B1 {
+    grid-area: B1;
+    display: grid;
+    height: auto;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    width: auto;
+    text-align: center;
+    place-items: center;
+    background-color: #ff0582;
+}
+.B2 {
+    grid-area: B2;
+    display: grid;
+    height: auto;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    width: auto;
+    text-align: center;
+    place-items: center;
+    background-color: #7f88ff;
+}
+.cat {
+    grid-area: cat;
+    display: grid;
+    height: auto;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    width: auto;
+    text-align: center;
+    place-items: center;
+    background-color: #000000;
+}
+.C1 {
+    grid-area: C1;
+    display: grid;
+    height: auto;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    width: auto;
+    text-align: center;
+    place-items: center;
+    background-color: #ff0582;
+}
+.C2 {
+    grid-area: C2;
+    display: grid;
+    height: auto;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    width: auto;
+    text-align: center;
+    place-items: center;
+    background-color: #7f88ff;
+}
+.D1 {
+    grid-area: D1;
+    display: grid;
+    height: auto;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    width: auto;
+    text-align: center;
+    place-items: center;
+    background-color: #ff0582;
+}
+.D2 {
+    grid-area: D2;
+    display: grid;
+    height: auto;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    width: auto;
+    text-align: center;
+    place-items: center;
+    background-color: #7f88ff;
+}
+.D3 {
+    grid-area: D3;
+    display: grid;
+    height: auto;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    width: auto;
+    text-align: center;
+    place-items: center;
+    background-color: #abce11;
+}
+.E123 {
+    grid-area: E123;
+    display: grid;
+    height: auto;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    width: auto;
+    text-align: center;
+    place-items: center;
+    background-color: #abce11;
+}
+.F1 {
+    grid-area: F1;
+    display: grid;
+    height: auto;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    width: auto;
+    text-align: center;
+    place-items: center;
+    background-color: #ff0582;
+}

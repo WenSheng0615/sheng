@@ -1,0 +1,79 @@
+* {
+    font-family: '微軟正黑體'
+}
+header {
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding-bottom: 10px;
+}
+h1 {
+    padding-top: 30px;
+}
+.header_ul, .header_li {
+    display: inline;
+    padding-left: 0px;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-weight: bolder;
+}
+.header_a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.header_a:hover {
+    color: #e56b42;
+}
+main, article, section {
+    background-color: #f4f4f4;
+    padding: 20px;
+    height: 100%;
+}
+h2 {
+    color: #42434b;
+}
+img {
+    border-radius: 50%;
+    width: 150px;
+}
+.main_ul, .main_li {
+    list-style-position: inside;
+    padding: 0px;
+}
+main table {
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    width: 100%;
+}
+main tr, main td , main th {
+    border: 1px solid #000000;
+    text-align: left;
+    padding: 10px;
+}
+details {
+    padding: 10px;
+    border: 1px solid #000000;
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+article table {
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #000000;
+    border-collapse: collapse;
+}
+article tr, article td, article th {
+    text-align: center;
+    border: 2px solid #000000;
+    padding: 10px;
+}
+article th {
+    background-color: #d3d3d3;
+}
+section {
+    text-align: center;
+}
+font {
+    text-align: left;
+    background-color: #ffffff;
+}
