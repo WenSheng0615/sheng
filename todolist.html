@@ -1,9 +1,42 @@
-<html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todolist_Practice</title>
 </head>
 <body>
-    
+    <h1>代辦事項清單</h1>
+    <input type="text">
+    <button onclick="addItem()">點選增加</button>
+    <ul>
+        
+    </ul>
+    <script>
+        const input = document.querySelector('input')
+        const ul = document.querySelector('ul')
+        let id = 0
+        console.log(ul)
+        function addItem() {
+            console.log(input.value);
+            ul.innerHTML += `
+            <li id="${++id}">
+                <span>${input.value}</span>
+                <button onclick="updateItem(${id})">編輯</button>
+                <button onclick="removeItem(${id})">刪除</button>
+            </li>
+            `
+        }
+        function updateItem(updateid) {
+            const span = document.querySelector(`[id="${updateid}"] > span`)
+            const newWord = prompt('請輸入新訊息：',span.textContent)
+            span.textContent = newWord
+        }
+        function removeItem(removeid) {
+            const li = document.querySelector(`[id="${removeid}"]`)
+            li.remove()
+        }
+    </script>
+</body>
 </body>
 </html>
