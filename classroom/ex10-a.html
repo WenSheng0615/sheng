@@ -29,11 +29,35 @@
 <body>
 	<div>
 	<form name="myform">
-		請輸入成績<input type="text" name="s1" value="0"><br><br>
+		請輸入成績<input type="text" name="s1" value="0" ><br><br>
 		<input type="button" value="執行" name="b1" onclick="score()">
 		<input type="text" name="s2"><br><br>
 	</form>
 	</div>
 </body>
+    <script>
+        const input = document.querySelector(`input[name="s1"]`);
+        const output = document.querySelector(`input[name="s2"]`);
+        function score() {
+            if (input.value < 60) {
+                output.value = "不及格"
+            }
+            else {
+                output.value = "及格"
+            }
 
+            /* 可執行但寫法不建議
+            switch (true) {
+                case (input.value < '60'):
+                    output.value = "不及格";
+                    break;
+                default:
+                    output.value = "及格";
+                    break;
+            }
+            */
+           
+        }
+
+    </script>
 </html>
