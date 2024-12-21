@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>簡易計算機</title>
+</head>
+<body>
+    <input type="text" id="input"><button id="button" onclick="addNumber()">確認</button>
+    <p></p>
+</body>
+    <script>
+        const persent = parseFloat(0.5)
+        function addNumber() {
+            ans = ""
+            let input = document.querySelector('#input');
+            let p = document.querySelector('p')
+            number = input.value;
+            let total = parseFloat(number * persent)
+            console.log(total);
+            ans = p.innerHTML += `${total}`
+        };
+    </script>
+</html>
