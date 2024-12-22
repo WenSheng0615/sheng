@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>點擊按鈕更換文字</title>
+</head>
+<body>
+    <h1><p id="good" onclick="changeText()">Good Day</p></h1>
+    <h1><p id="bad" onclick="changeText_2()">Bay Day</p></h1>
+</body>
+    <script>
+        function changeText() {
+            document.querySelector('#good').textContent = "Gay Day"
+        }
+        function changeText_2() {
+            document.querySelector('#bad').textContent = "Gay Day"
+        }
+    </script>
+</html>
