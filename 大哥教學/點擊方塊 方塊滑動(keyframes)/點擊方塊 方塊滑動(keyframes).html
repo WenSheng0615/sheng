@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>點擊方塊 方塊滑動(keyframes)</title>
+    <link rel="stylesheet" href="點擊方塊 方塊滑動(keyframes).css">
+</head>
+<body>
+    <div onclick="traslateItem()">
+        <h1>Hello World</h1>
+    </div>
+</body>
+    <script>
+        function traslateItem() {
+            var word = document.querySelector('div');
+            word.style.transform = "translateY(100%)";
+            console.log(word)
+        }
+    </script>
+</html>
