@@ -1,0 +1,51 @@
+/* 方法一用css */
+html {
+    scroll-behavior: smooth;
+    
+}
+
+
+
+
+
+* {
+    font-family: "arial", "標楷體";
+    font-size: medium;
+}
+
+button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border: 0px;
+    background-color: #666666;
+    border-radius: 10px;
+    padding: 10px;
+    font-size:24px;
+    width: 100px;
+}
+
+.button {
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
+    border: 0px;
+    background-color: #666666;
+    border-radius: 10px;
+    padding: 10px;
+    font-size:24px;
+    font-family: "微軟正黑體";
+    font-weight: bolder;
+    color: aliceblue;
+}
+
+a {
+    font-family: "微軟正黑體";
+    font-weight: bolder;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+a:active {
+    color: rgb(213, 124, 22);
+}
