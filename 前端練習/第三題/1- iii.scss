@@ -1,0 +1,30 @@
+body {
+    font-family: 'arial', '微軟正黑體';
+}
+
+.interface {
+    .title {
+        justify-items: first;
+        h3 {
+            justify-content: left;
+            color: #393628;
+            margin-bottom: 5px;
+            padding-left: 15.5%;
+        }
+    }
+    .flex-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 25px;
+        img {
+            width: 250px;
+        }
+        .items {
+            p {
+                text-align: left;
+                margin: 5px 0px;
+            }
+        }
+    }
+}
