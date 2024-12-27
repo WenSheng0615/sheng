@@ -3,18 +3,22 @@ body {
 }
 
 .interface {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    // width: 80%;
     .title {
-        justify-items: first;
+        text-align: left;
+        // width: 100%;
         h3 {
             justify-content: left;
             color: #393628;
             margin-bottom: 5px;
-            padding-left: 15.5%;
+            padding-left: 20px;
         }
     }
     .flex-container {
         display: flex;
-        justify-content: center;
         flex-wrap: wrap;
         gap: 25px;
         img {
