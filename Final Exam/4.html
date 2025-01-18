@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Gallery container */
+    .gallery-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    }
+
+    /* Gallery images container */
+    .gallery {
+    display: flex;
+    transition: transform 0.5s ease;
+    }
+
+    .gallery-images {
+    display: flex;
+    width: 100%;
+    }
+
+    .gallery-images img {
+    width: 25%; /* Display 4 images by default */
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Hover effect */
+    .gallery-images img:hover {
+    transform: scale(1.1); /* Zoom in effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    }
+
+    /* Arrow buttons */
+    .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    }
+
+    .left {
+    left: 0;
+    }
+
+    .right {
+    right: 0;
+    }
+
+    /* Dot indicators */
+    .dots {
+    text-align: center;
+    margin-top: 10px;
+    }
+
+    .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    }
+
+    .dot.active {
+    background-color: #717171;
+    }
+
+    /* Responsive Styles */
+    @media screen and (max-width: 768px) {
+    .gallery-images img {
+        width: 50%; /* Display 2 images per view when screen width is less than 768px */
+    }
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="gallery-container">
+  <button class="arrow left" id="left-arrow">&#9664;</button>
+  <div class="gallery">
+    <div class="gallery-images">
+      <!-- Images 21 to 33 -->
+      <img src="static/21.jpg" alt="Image 21">
+      <img src="static/22.jpg" alt="Image 22">
+      <img src="static/23.jpg" alt="Image 23">
+      <img src="static/24.jpg" alt="Image 24">
+      <img src="static/25.jpg" alt="Image 25">
+      <img src="static/26.jpg" alt="Image 26">
+      <img src="static/27.jpg" alt="Image 27">
+      <img src="static/28.jpg" alt="Image 28">
+      <img src="static/29.jpg" alt="Image 29">
+      <img src="static/30.jpg" alt="Image 30">
+      <img src="static/31.jpg" alt="Image 31">
+      <img src="static/32.jpg" alt="Image 32">
+      <img src="static/33.jpg" alt="Image 33">
+    </div>
+  </div>
+  <button class="arrow right" id="right-arrow">&#9654;</button>
+
+  <div class="dots">
+    <!-- Dots for each group -->
+    <span class="dot" data-index="0"></span>
+    <span class="dot" data-index="1"></span>
+    <span class="dot" data-index="2"></span>
+    <span class="dot" data-index="3"></span>
+  </div>
+</div>
+
+    <script>
+        const leftArrow = document.getElementById('left-arrow');
+        const rightArrow = document.getElementById('right-arrow');
+        const gallery = document.querySelector('.gallery');
+        const dots = document.querySelectorAll('.dot');
+        const imagesPerPage = 4; // Number of images to show at once (default 4 images)
+        const totalImages = 13; // Total number of images (21 to 33)
+        const totalGroups = Math.ceil(totalImages / imagesPerPage); // Number of groups
+
+        let currentGroup = 0;
+
+        // Function to update gallery display
+        function updateGallery() {
+        gallery.style.transform = `translateX(-${currentGroup * 100}%)`;
+
+        // Update active dot
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentGroup);
+        });
+
+        // Show or hide arrow buttons
+        leftArrow.style.display = currentGroup === 0 ? 'none' : 'block';
+        rightArrow.style.display = currentGroup === totalGroups - 1 ? 'none' : 'block';
+        }
+
+        // Function to handle left arrow click
+        leftArrow.addEventListener('click', () => {
+        if (currentGroup > 0) {
+            currentGroup--;
+            updateGallery();
+        }
+        });
+
+        // Function to handle right arrow click
+        rightArrow.addEventListener('click', () => {
+        if (currentGroup < totalGroups - 1) {
+            currentGroup++;
+            updateGallery();
+        }
+        });
+
+        // Function to handle dot click
+        dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            currentGroup = parseInt(dot.getAttribute('data-index'));
+            updateGallery();
+        });
+        });
+
+        // Initialize the gallery
+        updateGallery();
+
+    </script>
+</body>
+</html>

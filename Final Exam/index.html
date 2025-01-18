@@ -1,0 +1,116 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Final Exam</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    Q1
+    <div id="div">
+        <img id="image" src="static/ntub1.jpg" alt="Default Image">
+    </div>
+    <hr>
+    Q2
+        <div class="container">
+            <div class="animated-image" id="animated-img"></div>
+        </div>
+    <hr>
+    Q3
+        <div class="carousel">
+            <img clsss="Q5" src="static/6.jpg" alt="Image 1" class="active">
+            <img clsss="Q5" src="static/7.jpg" alt="Image 2">
+            <img clsss="Q5" src="static/8.jpg" alt="Image 3">
+            <img clsss="Q5" src="static/9.jpg" alt="Image 3">
+            <img clsss="Q5" src="static/10.jpg" alt="Image 3">
+            <img clsss="Q5" src="static/11.jpg" alt="Image 3">
+            <button class="prev">&#9664;</button>
+            <button class="next">&#9654;</button>
+            <div class="dots"></div>
+        </div>
+    <hr>
+    Q4
+    
+    <hr>
+    Q5
+        <div>
+
+        </div>
+    <hr>
+    Q6
+        <h1>按鈕阿</h1>
+        <button><a href="#div">TOP</a></button>
+    <script>
+        const imageElement = document.getElementById('image');
+        const defaultImage = 'static/ntub3.jpg';
+        const hoverImage = 'static/ntub2.jpg';
+        imageElement.addEventListener('mouseenter', () => {
+            imageElement.src = hoverImage;
+            hoverImage.style.width = "300px";
+        });
+        imageElement.addEventListener('mouseleave', () => {
+            imageElement.src = defaultImage;
+        });
+        
+
+        const images = document.querySelectorAll('.carousel img');
+        const prevButton = document.querySelector('.carousel .prev');
+        const nextButton = document.querySelector('.carousel .next');
+        const dotsContainer = document.querySelector('.dots');
+        let currentIndex = 0;
+
+        // 初始化點點指示器
+        images.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (index === currentIndex) {
+                dot.classList.add('active');
+            }
+            dot.addEventListener('click', () => {
+                showImage(index);
+            });
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.dot');
+
+        function showImage(index) {
+            // 移除所有圖片的 active 樣式
+            images.forEach(img => img.classList.remove('active'));
+
+            // 移除所有點點的 active 樣式
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            // 更新當前索引並添加 active 樣式
+            currentIndex = index;
+            images[currentIndex].classList.add('active');
+            dots[currentIndex].classList.add('active');
+        }
+
+        // 上一張圖片
+        prevButton.addEventListener('click', () => {
+            showImage((currentIndex - 1 + images.length) % images.length);
+        });
+
+        // 下一張圖片
+        nextButton.addEventListener('click', () => {
+            showImage((currentIndex + 1) % images.length);
+        });
+
+
+        const animatedImage = document.getElementById('animated-img');
+        let isAnimating = true;
+
+        // Toggle animation on click
+        animatedImage.addEventListener('click', () => {
+        if (isAnimating) {
+            animatedImage.style.animationPlayState = 'paused'; // Pause animation
+        } else {
+            animatedImage.style.animationPlayState = 'running'; // Resume animation
+        }
+        isAnimating = !isAnimating; // Toggle the state
+        });
+
+    </script>
+</body>
+</html>
